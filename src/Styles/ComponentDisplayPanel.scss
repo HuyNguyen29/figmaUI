@@ -1,0 +1,107 @@
+.right-panel-contents {
+  /*position: absolute;
+    left: 300px;
+    width: 68%;
+    top: 50%;*/
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 90%;
+  white-space: pre-wrap;
+
+  .buttons {
+    /*border: 2px solid;*/
+    /* width: 100%; */
+    padding: 29px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .checkbox-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .radio-button-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-components-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    .row {
+      display: flex;
+      margin-left: 10%;
+      align-items: baseline;
+      .column-1 {
+        display: flex;
+        width: 10%;
+      }
+      .column-2 {
+        margin-left: 10%;
+      }
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .display-udf-container {
+    height: 85vh;
+    display: block;
+    width: 100%;
+    /* border: 2px solid; */
+    background-color: white;
+    border-radius: 10px;
+    .submit-btn {
+      margin-top: 10%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .display-user-selection-container {
+    height: 85vh;
+    width: 100%;
+  }
+  .display-timepicker-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: -10%;
+    .date-time-info {
+      position: absolute;
+      /* border: 2px solid; */
+      margin-top: 10%;
+    }
+  }
+  .display-reportwidget-container {
+    height: 85vh;
+    width: 100%;
+    margin-top: 1%;
+  }
+  .progress-element-container {
+    height: 85vh;
+    width: 100%;
+    margin-top: 1%;
+  }
+  .radio-text-container {
+    height: 85vh;
+    width: 100%;
+    margin-top: 1%;
+  }
+  .toggle-container {
+    height: 85vh;
+    width: 100%;
+    margin-top: 1%;
+  }
+}

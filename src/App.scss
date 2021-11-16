@@ -1,0 +1,68 @@
+@font-face {
+  font-family: boldFont;
+  src: url(../src/Styles/Fonts/AktivGrotesk_A_Bd.ttf);
+}
+
+.App {
+  background-color: #dfdfdf;
+  height: 100%;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    /* border: 2px solid; */
+    background-color: white;
+    box-shadow: 0 1px 5px 2px #aba6a6;
+    font-family: boldFont;
+    font-size: 18px;
+    width: 100%;
+    z-index: 100;
+    .accesstoken-input-container {
+      display: flex;
+      position: fixed;
+      right: 20px;
+      gap: 10px;
+      .accesstoken-inputTextbox {
+        border-radius: 3.5px;
+        box-sizing: border-box;
+        color: #1b1b1b;
+        display: block;
+        font-family: "AktivGrotesk-Regular";
+        font-size: 14px;
+        /* width: 100%; */
+        height: 34px;
+        background: #ffffff;
+        border: solid 1px #b6b6b6;
+        margin-bottom: 2px;
+        padding: 10px;
+      }
+    }
+
+    /* margin-top: 1%; */
+  }
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: calc(100% - 60px);
+
+    .left-panel-container {
+      width: 200px;
+      background-color: white;
+      margin: 10px;
+      border-radius: 6px;
+    }
+    .right-panel-container {
+      /*border:2px solid;*/
+      width: calc(100% - 200px);
+      margin:10px;
+      border-radius: 6px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+}
