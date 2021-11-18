@@ -1,55 +1,78 @@
 import React, { useState } from "react";
 import "../Styles/ComponentDisplayPanel.scss";
-import DisplayAppButtons from "./DisplayAppButtons";
-import DisplayCheckBox from "./DisplayCheckBox";
-import DisplayDialogControl from "./DisplayDialogControl";
-import { DateTimePicker } from "disprzcomponents";
-import DisplayRadioButton from "./DisplayRadioButton";
-import DisplayFormComponent from "./DisplayFormComponent";
-import DisplayUdfSelector from "./DisplayUdfSelector";
-import DisplayUserSelectionWidget from "./DisplayUserSelectionWidget";
-import DisplayToggleButton from "./DisplayToggleButton";
-import DisplayReport from "./DisplayReportWidget";
-import DisplayTimePicker from "./DisplayTimePicker";
-import ProgressElement from "./ProgressElement";
-import RadioText from "./RadioText";
+import { MultiSelectDropDown } from "disprzcomponents";
+import MicroExp from "./MircoExp";
+import { useHistory } from "react-router-dom";
 
 export default function ComponentDisplayPanel({ onSelectComponentName }) {
+  const history = useHistory();
   //To choose correspoding component
   const switchComponent = () => {
     switch (onSelectComponentName) {
-      case "AppButton":
-        return <DisplayAppButtons />;
-      case "CheckBox":
-        return <DisplayCheckBox />;
-      case "DateTimePicker":
-        return (
-          <DateTimePicker
-            onChange={function noRefCheck() {}}
-            selectsRange={false}
-          />
-        );
-      case "DialogControl":
-        return <DisplayDialogControl />;
-      case "RadioButton":
-        return <DisplayRadioButton />;
-      case "ToggleButton":
-        return <DisplayToggleButton />;
-      case "TimePicker":
-        return <DisplayTimePicker />;
-      case "FormComponent":
-        return <DisplayFormComponent />;
-      case "UdfSelector":
-        return <DisplayUdfSelector />;
-      case "UserSelectionWidget":
-        return <DisplayUserSelectionWidget />;
-      case "ReportWidget":
-        return <DisplayReport />;
-      case "ProgressElement":
-        return <ProgressElement />;
-      case "RadioText":
-        return <RadioText />;
+      case "MicroExp":
+        return <MicroExp />;
+      default:
+        return null;
     }
   };
-  return <div className="right-panel-contents">{switchComponent()}</div>;
+
+  const onCreateExpClicked = () => {
+    history.push("/mircoExp");
+  };
+
+  return (
+    <div className="right-panel-contents">
+      <div className="right-panel-header">
+        <MultiSelectDropDown
+          items={[
+            {
+              label: "Value 1",
+              value: "val1",
+            },
+            {
+              label: "Value 2",
+              value: "val2",
+            },
+          ]}
+          disableSearch
+          onSelect={function noRefCheck() {}}
+          placeholder="Select value"
+          values={[
+            {
+              label: "Value 1",
+              value: "val1",
+            },
+          ]}
+        />
+        <div className="right-panel-header-right">
+          <MultiSelectDropDown
+            items={[
+              {
+                label: "Value 1",
+                value: "val1",
+              },
+              {
+                label: "Value 2",
+                value: "val2",
+              },
+            ]}
+            disableSearch
+            onSelect={function noRefCheck() {}}
+            placeholder="Select value"
+            values={[
+              {
+                label: "Value 1",
+                value: "val1",
+              },
+            ]}
+          />
+
+          <button onClick={onCreateExpClicked} className={"button-create"}>
+            Create new microexperience
+          </button>
+        </div>
+      </div>
+      {switchComponent()}
+    </div>
+  );
 }

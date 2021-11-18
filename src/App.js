@@ -1,30 +1,18 @@
-import React, { useState,useContext, createContext} from "react";
-import './App.scss';
-import SelectComponent from "./Components/SelectComponent";
-import ComponentDisplayPanel from "./Components/ComponentDisplayPanel";
-import {ReactComponent as AppIcon} from "./AppIcons.svg";
+import React, { useState, useContext, createContext } from "react";
+import "./App.scss";
+
+import { Switch, Route } from "react-router-dom";
+import MainScreen from "./screen/MainScreen";
+import CreateMicroExp from "./screen/createMircoExp/CreateMicroExp";
+import DefineSupervised from "./screen/defineSupervised/DefineSupervised";
 
 function App() {
-  const [onSelectComponentName,setOnSelectComponentName]=useState("AppButton");
-  
-return (
-  <div className="App">
-    <AppIcon/>
-    <div className="content-wrapper">
-        <div className="left-panel-container">
-          <SelectComponent
-            onSelectComponentName={onSelectComponentName}
-            setOnSelectComponentName={setOnSelectComponentName}
-            />
-        </div>
-        <div className="right-panel-container">
-          <ComponentDisplayPanel
-           onSelectComponentName={onSelectComponentName}
-          />
-        </div>
-    </div>
-    
- </div>
+  return (
+    <Switch>
+      <Route exact path="/" component={MainScreen} />
+      <Route exact path="/mircoExp" component={CreateMicroExp} />
+      <Route exact path="/defineSupervised" component={DefineSupervised} />
+    </Switch>
   );
 }
 

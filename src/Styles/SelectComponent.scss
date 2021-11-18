@@ -1,57 +1,55 @@
 $font-family-bold: "AktivGrotesk-Bold";
 $font-family-regular: "AktivGrotesk-Regular";
 $font-family-moderate: "AktivGrotesk-Medium";
-@font-face{
-    font-family: regularFont;
-    src:url(./Fonts/AktivGrotesk_A_Rg.ttf);
+@font-face {
+  font-family: regularFont;
+  src: url(./Fonts/AktivGrotesk_A_Rg.ttf);
 }
-@font-face{
-    font-family:boldFont;
-    src:url(./Fonts/AktivGrotesk_A_Bd.ttf);
+@font-face {
+  font-family: boldFont;
+  src: url(./Fonts/AktivGrotesk_A_Bd.ttf);
 }
 .left-panel-contents {
-ol{
+  ol {
     margin-top: 5%;
     text-align: center;
-    
-}
-ol:before{
+  }
+  ol:before {
     content: attr(data-header);
-    font-size:170%;
-    font-weight:bold;
-    font-family:boldFont;
-    padding:0;
+    font-size: 170%;
+    font-weight: bold;
+    font-family: boldFont;
+    padding: 0;
     text-transform: uppercase;
-    margin-top:1%;
-    
-}
+    margin-top: 1%;
+  }
 
-    
-ol li{
+  ol li {
     display: flex;
     align-items: center;
-    justify-content:flex-start;
-    padding: 8px 20px;
+    justify-content: center;
+    padding: 7px;
     cursor: pointer;
     word-break: break-word;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    font-size: 14px;
+    font-size: 16px;
     font-family: regularFont;
-    &:hover{
-        background-color: #898F9C;
-        color:white;
-    }
-    
-    }
-    ol li.active{
-    background-color: #4267B2;
-    color:white;
+    width: 249px;
+    border-radius: 100px;
+    // &:hover {
+    //      background-color: #898f9c;
+    //      color: white;
+    // }
+  }
+  ol li.active {
+    background-color: #00be6e;
+    color: white;
+  }
 }
-}   
- 
-.inactive{
-    color:green;
-    background-color: yellow;
+
+.inactive {
+  color: green;
+  background-color: yellow;
 }

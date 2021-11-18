@@ -48,21 +48,36 @@
     height: calc(100% - 60px);
 
     .left-panel-container {
-      width: 200px;
+      width: 331px;
       background-color: white;
-      margin: 10px;
-      border-radius: 6px;
+      margin: 10px 0px 10px 10px;
+      justify-content: center;
+      display: flex;
     }
     .right-panel-container {
       /*border:2px solid;*/
-      width: calc(100% - 200px);
-      margin:10px;
-      border-radius: 6px;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: calc(100% - 331px);
+      margin: 10px 0px 10px 0px;
+      background: #e5e5e5;
+      padding: 0px 16px 0px 16px;
     }
   }
+}
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: #00be6e;
+}
+.sub-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.65);
+}
 
+img {
+  object-fit: cover;
 }

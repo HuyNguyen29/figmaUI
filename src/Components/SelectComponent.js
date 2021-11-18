@@ -1,22 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Scrollbars } from "react-custom-scrollbars";
+import images from "../asset/image";
 import "../Styles/SelectComponent.scss";
-
+import IconMicro from "../asset/IconMirco";
 function SelectComponent({ onSelectComponentName, setOnSelectComponentName }) {
-  const components = [
-    { displayName: "App Button", key: "AppButton" },
-    { displayName: "Check Box", key: "CheckBox" },
-    { displayName: "Dialog Control", key: "DialogControl" },
-    { displayName: "Radio Button", key: "RadioButton" },
-    { displayName: "Toggle Button", key: "ToggleButton" },
-    { displayName: "Time Picker", key: "TimePicker" },
-    { displayName: "Form Component", key: "FormComponent" },
-    { displayName: "Udf Selector", key: "UdfSelector" },
-    { displayName: "User Selection Widget", key: "UserSelectionWidget" },
-    { displayName: "Report Widget", key: "ReportWidget" },
-    { displayName: "Progress Element", key: "ProgressElement" },
-    { displayName: "Radio Button & Text field", key: "RadioText" },
-  ];
+  const components = [{ displayName: "Micro experiences", key: "MicroExp" }];
 
   const handleComponentClick = (key) => {
     setOnSelectComponentName(key);
@@ -41,7 +29,14 @@ function SelectComponent({ onSelectComponentName, setOnSelectComponentName }) {
                     onSelectComponentName === component.key && "active"
                   }
                 >
-                  {component.displayName}
+                  <IconMicro
+                    color={
+                      onSelectComponentName === component.key
+                        ? "white"
+                        : "#00be6e"
+                    }
+                  />
+                  <div style={{ marginLeft: 10 }}>{component.displayName}</div>
                 </li>
               );
             })}
