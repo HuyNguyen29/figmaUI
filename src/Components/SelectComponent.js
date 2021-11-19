@@ -13,12 +13,7 @@ function SelectComponent({ onSelectComponentName, setOnSelectComponentName }) {
   return (
     <div className="left-panel-contents">
       <ol>
-        <Scrollbars
-          autoHeight={true}
-          autoHeightMax={550}
-          autoHide
-          hideTracksWhenNotNeeded={true}
-        >
+        <div>
           <div className="component-list">
             {components.map((component, index) => {
               return (
@@ -41,7 +36,7 @@ function SelectComponent({ onSelectComponentName, setOnSelectComponentName }) {
               );
             })}
           </div>
-        </Scrollbars>
+        </div>
       </ol>
     </div>
   );

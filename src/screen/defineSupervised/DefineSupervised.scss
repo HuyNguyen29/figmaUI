@@ -1,4 +1,43 @@
 .define-container {
   margin: 24px 0px 0px 224px;
-  background-color: red;
+}
+.bottom-view {
+  display: flex;
+  margin: 24px 0px 0px 340px;
+}
+button {
+  background-color: transparent;
+  border-radius: 100px;
+  border: solid;
+  border-width: 1px;
+  padding: 8px 20px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #00be6e;
+  margin-right: 15px;
+}
+
+.button-inactive {
+  background-color: transparent;
+  border-radius: 100px;
+  border: solid;
+  border-width: 1px;
+  padding: 8px 20px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #d0d0d0;
+}
+
+.button-active {
+  background-color: #00be6e;
+  border-radius: 100px;
+  border: solid;
+  border-width: 1px;
+  padding: 8px 20px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffff;
 }
